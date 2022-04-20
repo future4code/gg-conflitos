@@ -24,9 +24,7 @@ function App () {
     <div>
       <h1>Pokemons</h1>
       {pokemons.map((pokemon,i) => {
-        return (
-          <p style={{backgroundColor: 'red'}} key={i}>{pokemon.name}</p>
-        )
+        return <p style={{backgroundColor: 'pink'}} key={i}>{pokemon.name}</p>
       })}
     </div>
   );
