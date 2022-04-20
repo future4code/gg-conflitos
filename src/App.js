@@ -10,7 +10,8 @@ function App () {
     const fetch = async () => {
       try {
         const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon');
-        setPokemons(data);
+        setPokemons(data.results);
+        console.log(data);
       } catch(e) {
         console.log(e);
       }
@@ -22,7 +23,7 @@ function App () {
   return (
     <div>
       <h1>Pokemons</h1>
-      
+      {pokemons.map(pokemon => <p>{pokemon.name}</p>)}
     </div>
   );
 
